@@ -5,7 +5,11 @@ function convertToCelsius() {
     
     const kelvinInput = document.getElementById('kelvinInput').value;
     const celsius = kelvinInput - 273.15;
-    document.getElementById('result').innerText = `Temperature in Celsius: ${celsius.toFixed(2)}°C`;
+    if(kelvinInput===""){
+     document.getElementById('display1').innerText= "incorrect value, please enter valid value"  
+    }else{
+        document.getElementById('result').innerText = `Temperature in Celsius: ${celsius.toFixed(2)}°C`;   
+    }
 
 }
     /*function convertToCelsius(){
@@ -15,6 +19,6 @@ document.getElementById('display1').innerHTML =  `THE TEMPERATURE IN CELSIUS IS 
 */
 function convertToKelvin(){
     const celsiusInput = document.getElementById('celsiusInput').value
-    let kelvin = (celsiusInput)  +  273;
-    document.getElementById('display2').innerHTML=kelvin
+    let kelvin = (celsiusInput)+(273);
+    document.getElementById('display2').innerText=kelvin
 }
