@@ -26,3 +26,8 @@ function convertToKelvin(){
         document.getElementById('display2').innerText=kelvin
     }
     }
+function convertFromFahrenheitToCelsius(){
+    const fahrenheitInput = document.getElementById('fahrenheitInput').value
+    const Celsius1 =(fahrenheitInput-32)*5/9
+    document.getElementById('display3').innerText= `temperature in celsius ${Celsius1}`
+}
