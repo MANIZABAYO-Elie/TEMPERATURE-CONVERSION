@@ -1,17 +1,20 @@
-const kelvin_value = document.getElementById('kelvin_value').value
-const result = document.getElementById('result1')
-const celsius_value = document.getElementById('celsius_value').value
+const kelvinInput = document.getElementById('kelvinInput').value;
+const result = document.getElementById('result')
 
-function convertToCelsius(){
+function convertToCelsius() {
+    
+    const kelvinInput = document.getElementById('kelvinInput').value;
+    const celsius = kelvinInput - 273.15;
+    document.getElementById('result').innerText = `Temperature in Celsius: ${celsius.toFixed(2)}°C`;
+
+}
+    /*function convertToCelsius(){
 let celsius =kelvin_value - 273
 document.getElementById('display1').innerHTML =  `THE TEMPERATURE IN CELSIUS IS ${celsius}`
 }
+*/
 function convertToKelvin(){
-    let kelvin = celsius_value + 273
-    document.getElementById('display2').innerHTML=`THE TEMPERATURE IN KELVIN  IS ${kelvin}`
-    if(celsius_value===""){
-          display2.innerHTML ="incorect value , please enter valid in put"
-    }else{
-        document.getElementById('display2').innerHTML=`THE TEMPERATURE IN KELVIN  IS ${kelvin}` 
-    }
-    }
+    const celsiusInput = document.getElementById('celsiusInput').value
+    let kelvin = (celsiusInput)  +  273;
+    document.getElementById('display2').innerHTML=kelvin
+}
